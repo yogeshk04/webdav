@@ -24,7 +24,7 @@ Step 2: Check the version of davfs
 
 Step 3: Add the jfrog Credential Line into davfs secrets file
 	sudo vi /etc/davfs2/secrets
-		Add the API key line: https://siemens.jfrog.io/artifactory/jfrog-logs/ nikam xxxxxxx
+		Add the API key line: https://jfrog.io/artifactory/jfrog-logs/ user xxxxxxx
 
 Step 4: Create mount service
 	cd /etc/systemd/system
@@ -33,7 +33,7 @@ Step 4: Create mount service
 		Description=Mount WebDAV service
 
 		[Mount]
-		What=https://siemens.jfrog.io/artifactory/jfrog-logs
+		What=https://jfrog.io/artifactory/jfrog-logs
 		Where=/var/mnt/jfroglogs
 		Type=davfs
 		TimeoutSec=30
